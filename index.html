@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form-hometask</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form class="form">
+      <h1>Форма зворотнього зв'язку</h1>
+
+      <fieldset class="spesial-date">
+        <legend>Особливі данні</legend>
+        <label>
+          Ім'я
+          <input class="name"
+            type="text"
+            placeholder="Your name"
+            name="username"
+            required
+            autofocus
+            pattern="^[a-z0-9_-]{3,15}$"
+          />
+        </label>
+
+        <label>
+          Електронна пошта
+          <input class="email"
+            type="email"
+            placeholder="Your email"
+            name="email"
+            required
+            pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+          />
+        </label>
+
+        <label>
+          Дата народження
+          <input class="date" type="date" placeholder="Your birthday" name="birthday" />
+        </label>
+      </fieldset>
+
+      <fieldset class="gender">
+        <legend>Стать</legend>
+        <label>
+          <input class="mail" type="radio" value="Mail" name="gender" checked />
+          Mail
+        </label>
+
+        <label>
+          <input class="femail" type="radio" value="Femail" name="gender" />
+          Femail
+        </label>
+
+        <label>
+          <input class="nonbinore" type="radio" value="Nonbinore" name="gender" />
+          Nonbinore
+        </label>
+      </fieldset>
+
+      <fieldset class="additional-settings">
+        <legend>Додаткові налаштування</legend>
+        <label>
+          <input type="checkbox" name="subscribe" value="true" />
+          Підписатися на розсилку
+        </label>
+      </fieldset>
+
+      <fieldset class="hobby">
+        <legend>Оберіть категорію свох інтересів</legend>
+        <select class="category" name="category">
+          <optgroup class="subject1" label="Предмет1">
+            <option value="subtopic1">Підтема 1</option>
+            <option value="subtopic2">Підтема 2</option>
+            <option value="subtopic3">Підтема 3</option>
+          </optgroup>
+          <optgroup class="subject2" label="Предмет2">
+            <option value="subtopic1">Підтема 1</option>
+            <option value="subtopic2">Підтема 2</option>
+            <option value="subtopic3">Підтема 3</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <fieldset class="about us">
+        <legend>Як ви дізналися про нас</legend>
+        <label>
+          <input class="internet" type="radio" value="Internet" name="learn" checked />
+          Інтернет
+        </label>
+
+        <label>
+          <input class="tv" type="radio" value="TV" name="learn" />
+          Телебачення
+        </label>
+
+        <label>
+          <input class="friends" type="radio" value="Friends" name="learn" />
+          Друзі
+        </label>
+      </fieldset>
+
+      <fieldset class="offers">
+        <legend>Опишіть свої враження/скарги/пропозиції</legend>
+        <textarea name="coment"></textarea>
+      </fieldset>
+
+      <button>Надіслати форму</button>
+    </form>
+  </body>
+</html>
